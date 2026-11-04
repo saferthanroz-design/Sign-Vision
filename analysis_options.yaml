@@ -4,7 +4,7 @@ analyzer:
     - build/**
     - android/**
     - ios/**
-    -tool/**
+    - tool/**
 include: package:flutter_lints/flutter.yaml
 
 linter:
