@@ -150,9 +150,9 @@ double vecDistance(List<double> live, List<double> sample) {
   if (l.length == 1 && s.length == 1) return pairCost(l[0], s[0]);
 
   if (l.length == 2 && s.length == 2) {
-    final slotwise = (pairCost(lL, sL) + pairCost(lR, sR)) / 2;
+    final slotwise = (pairCost(l[0], s[0]) + pairCost(l[1], s[1])) / 2;
     final swapped =
-        (pairCost(lL, mirrorHand(sR!)) + pairCost(lR, mirrorHand(sL!))) / 2;
+        (pairCost(l[0], mirrorHand(s[1])) + pairCost(l[1], mirrorHand(s[0]))) / 2;
     return math.min(slotwise, swapped);
   }
 
