@@ -1,0 +1,11 @@
+# Standard Flutter analysis options (same include as `flutter create`).
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Keep the rule set at the flutter_lints defaults for this scaffold.

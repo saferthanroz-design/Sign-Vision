@@ -1,0 +1,31 @@
+name: signvoice
+description: "SignVoice — ISL Sign-to-Voice: camera hand signs to text and speech. One Flutter codebase for Android and iOS."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Text-to-speech for the Speak button and auto-speak
+  # (hi-IN -> en-IN -> en voice preference, mirroring the web prototype).
+  flutter_tts: ^4.0.0
+  # Live camera preview + image stream for hand tracking
+  camera: ^0.12.0
+  # MediaPipe Hand Landmarker (Android-only) — real hand landmarks
+  hand_landmarker: ^3.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    # The starter model: the IDENTICAL file used by the web prototype
+    # (~/workspace/isl_sign_voice/model/starter_samples.json). Place it
+    # here before building — see README.md "Finishing the build".
+    - assets/model/starter_samples.json
