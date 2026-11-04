@@ -1,4 +1,4 @@
-# SignVision — cloud APK build (GitHub Actions).
+# SignVoice — cloud APK build (GitHub Actions).
 #
 # Local Gradle builds are blocked on the dev VM (the forked Gradle daemon
 # dies instantly), so this workflow is the build path: push to main and
@@ -8,7 +8,7 @@
 # Repo layout assumption: the repo root IS the Flutter project root
 # (i.e. push the contents of signvoice_app/, not the folder itself).
 
-name: Build SignVision APK
+name: Build SignVoice APK
 
 on:
   push:
@@ -38,5 +38,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: signvision-debug-apk
+          name: signvoice-debug-apk
           path: build/app/outputs/flutter-apk/app-debug.apk
