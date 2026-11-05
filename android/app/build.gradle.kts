@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "in.signvoice.signvoice"
-    compileSdk = 34
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
